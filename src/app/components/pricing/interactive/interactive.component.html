@@ -1,0 +1,26 @@
+<span class="views">{{pricing.views}} PAGEVIEWS</span>
+<mat-slider
+    class="slider"
+    step="1"
+    min="1"
+    max="5"
+    (valueChange)="updatePricing($event)"
+    value="1"
+></mat-slider>
+
+<div class="cost-container">
+  <span class="costs">${{!isYearly ? pricing.price : pricing.discountPrice}}</span>
+  <span class="month-span">/ month</span>
+</div>
+
+<div class="toggle-container">
+  <label class="label" [attr.for]="toggle.inputId">Monthly Billing</label>
+  <mat-slide-toggle (change)="toggleCosts($event)"
+                    #toggle>Yearly Billing
+  </mat-slide-toggle>
+  <span class="discount"></span>
+</div>
+
+
+
+

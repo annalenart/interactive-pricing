@@ -1,0 +1,97 @@
+@import "src/colors";
+
+:host {
+  display: grid;
+  grid-gap: 40px;
+  place-items: center;
+  padding: 50px 30px;
+  border-bottom: 1px solid $empty-slider-bac;
+
+  @media(min-width: 550px) {
+    grid-template-areas:
+  "views cost-container"
+  "slider slider"
+  "toggle-container toggle-container";
+  }
+}
+
+.views {
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  @media(min-width: 550px) {
+    font-size: 18px;
+    grid-area: views;
+  }
+}
+
+.cost-container {
+  display: flex;
+
+  @media(min-width: 550px) {
+    font-size: 18px;
+    grid-area: cost-container;
+  }
+
+  .costs {
+    font-size: 40px;
+    font-weight: 800;
+    color: $navy-blue;
+  }
+
+  .month-span {
+    font-weight: 500;
+    color: $text;
+    margin-left: 15px;
+  }
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media(min-width: 550px) {
+    font-size: 18px;
+    grid-area: toggle-container;
+  }
+
+  .label {
+    cursor: pointer;
+  }
+
+  .discount {
+    font-size: 12px;
+    font-weight: 500;
+    color: $orange-text;
+    background-color: $orange-btn-bac;
+    padding: 0 7.5px;
+    border-radius: 15px;
+    margin-left: 8px;
+
+    &::after {
+      content: '-25%'
+    }
+
+    @media(min-width: 550px) {
+      &::after {
+        content: '25% discount';
+      }
+    }
+  }
+}
+
+.slider {
+  width: 100%;
+
+  @media(min-width: 550px) {
+    grid-area: slider;
+    width: 80%;
+  }
+}
+
+.mat-slide-toggle {
+  margin-left: 8px;
+}
+
+

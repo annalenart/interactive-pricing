@@ -1,0 +1,10 @@
+@import "src/colors";
+
+:host {
+  background-color: $white-pricing-bac;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+}
+

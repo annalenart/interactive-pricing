@@ -35,7 +35,6 @@ export class InteractiveComponent implements OnInit {
   }
 
   updatePricing(sliderValue: number | null): void {
-    console.log(sliderValue)
     if (sliderValue) {
       this.pricing = this.multiplePricing[sliderValue];
     }
